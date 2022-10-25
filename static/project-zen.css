@@ -9,7 +9,7 @@ body{
     font-size: calc(13px + 0.390625vw);
     scroll-behavior: smooth;
 }
-address a[href^="mailto"]::before {
+a[href^="mailto"]::before {
     content: "📧 ";
 }
 h1{
@@ -79,8 +79,29 @@ abbr{
     font-style: italic;
     text-decoration: underline rgb(255, 74, 74) 2px;
 }
-
-
+input[type=text], [type=password]{
+    border: none;
+    border-bottom: 1px rgb(55, 55, 184) solid;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 0.5px;
+    border-radius: 2px;
+    padding: 5px;
+    width: 200px;
+    margin-top: 10px;
+    outline: none;
+}
+input[type=text], [type=password]::placeholder{
+    color: #767888;
+    font-size: 15px;
+    vertical-align:middle;
+}
+input[type=text], [type=password]:focus{
+    border-bottom: 2px rgb(55, 55, 184) solid;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+label{
+    transform: translate(.5rem,-50%);
+    font-size: small;
+}
 ::selection{
     color:rgb(2, 2, 2);
     background-color: #9bb2d2;
@@ -149,4 +170,25 @@ button:disabled{
     background: #e4e4e4;
     box-shadow: none;
     color: #989899;
+}
+
+
+/* tables */
+table, th, td{
+    border: 0.5px solid rgb(101, 101, 101);
+    border-collapse: collapse;
+}
+th, td{
+    padding: 7px 7px 7px 7px;
+}
+th{
+    background-color: #c5c5df;
+}
+td{
+    background-color: #dadada;
+}
+caption{
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 5px;
 }
