@@ -4,6 +4,8 @@
     --body-font: 'Open Sans', sans-serif;
 }
 body{
+    padding-left: 3%;
+    padding-right: 3%;
     font-family: var(--body-font);
     background-color: #f7f7f7;
     font-size: calc(13px + 0.390625vw);
@@ -12,6 +14,7 @@ body{
 a[href^="mailto"]::before {
     content: "📧 ";
 }
+
 h1{
     margin:0;
     margin-top: 20px;
@@ -128,7 +131,6 @@ html::-webkit-scrollbar-thumb:active {
     background: rgb(68, 68, 68);
     border-radius: 0px;
 }
-
 /* AUDIO CONTROLS WIP */
 audio{
     border-radius: 90px;
@@ -178,6 +180,11 @@ table, th, td{
     border: 0.5px solid rgb(101, 101, 101);
     border-collapse: collapse;
 }
+table{
+    display: block;
+    overflow:auto;
+    border: none;
+}
 th, td{
     padding: 7px 7px 7px 7px;
 }
@@ -191,4 +198,42 @@ caption{
     text-align: left;
     font-style: italic;
     margin-bottom: 5px;
+}
+
+
+code{
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
+
+mark{
+    background-color: #f8f853;
+}
+
+small {
+    font-size: .7em;
+    color: rgb(53, 53, 53);
+}
+
+
+video{
+    margin-top: 30px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 0.5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+video:not([width]){
+    width: 100%;
+    max-width: 550px;
+}
+
+video:hover{
+    box-shadow: 2px 2px 2px rgba(172, 166, 255, 0.9);
+    border-radius: 5px;
+    transition: 0.1s;
+
 }
