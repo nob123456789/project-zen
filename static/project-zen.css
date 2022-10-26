@@ -247,7 +247,8 @@ small {
 
 video{
     margin-top: 30px;
-    border-radius: 4px;
+    margin-bottom: 10px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 0.5px;
     margin-left: auto;
     margin-right: auto;
@@ -265,6 +266,26 @@ video:hover{
 
 }
 
+img{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 0.5px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.1s;
+    display: block;
+}
+img:not([width]){
+    width: 100%;
+    max-width: 550px;
+}
+
+img:hover{
+    border-radius: 18px;
+    transition: 0.1s;
+
+}
 
 /* STARTING WORK ON CUSTOM NAVBAR */
 body:has(navigation-bar){
@@ -274,7 +295,8 @@ navigation-bar{
     width:100%;
     height: 40px;
     z-index: 2;
-    background-color: #007bff;
+    background-color: #007bffe1;
+    backdrop-filter: blur(4px);
     position:fixed;
     display: flex;
     align-items:center;
