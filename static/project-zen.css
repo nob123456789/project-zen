@@ -126,6 +126,8 @@ input[type="file"]{
     width: 182px;
     border: 0.4px solid rgb(110, 110, 110);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 0.5px;
+
+    cursor: pointer;
 }
 
 label{
@@ -306,12 +308,24 @@ navigation-bar{
 navigation-bar > a{
     color: white;
     flex: 0;
+    padding: 7.5px 14px;
+    flex-basis: auto;
+    flex-direction: row;
     margin-right:20px;
     margin-left:15px;
     align-self: center;
 }
+navigation-bar > a:not(.logo):hover{
+    background-color: #0063cde1;
+    color: white;
+    text-decoration: none;
+}
 navigation-bar > .logo{
     flex-grow: 1;
     margin: 10px;
+    cursor: default;
 }
-
+navigation-bar > .logo:hover{
+    color: white;
+    text-decoration: none;
+}
