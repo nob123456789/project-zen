@@ -1,3 +1,12 @@
+/*
+██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗    ███████╗███████╗███╗   ██╗
+██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝██╔════╝╚══██╔══╝    ╚══███╔╝██╔════╝████╗  ██║
+██████╔╝██████╔╝██║   ██║     ██║█████╗  ██║        ██║         ███╔╝ █████╗  ██╔██╗ ██║
+██╔═══╝ ██╔══██╗██║   ██║██   ██║██╔══╝  ██║        ██║        ███╔╝  ██╔══╝  ██║╚██╗██║
+██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║       ███████╗███████╗██║ ╚████║
+╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝       ╚══════╝╚══════╝╚═╝  ╚═══╝
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root{
@@ -331,7 +340,13 @@ navigation-bar > .logo:hover{
 }
 
 
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*
+_  _   ___   ___  __  __  ___  _     ___  ____ ___ 
+| \| | / _ \ | _ \|  \/  |/   \| |   |_ _||_  /| __|
+| .  || (_) ||   /| |\/| || - || |__  | |  / / | _| 
+|_|\_| \___/ |_|_\|_|  |_||_|_||____||___|/___||___|
+
+Normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 
 /**
@@ -630,24 +645,16 @@ navigation-bar > .logo:hover{
   }
 
 
+/*
+  ___  _   _  ___  _____   ___   __  __         ___  _     ___  ___  ___  ___  ___ 
+ / __|| | | |/ __||_   _| / _ \ |  \/  |       / __|| |   /   \/ __|/ __|| __|/ __|
+| (__ | |_| |\__ \  | |  | (_) || |\/| |      | (__ | |__ | - |\__ \\__ \| _| \__ \
+ \___| \___/ |___/  |_|   \___/ |_|  |_|       \___||____||_|_||___/|___/|___||___/
+
+ CUSTOMIZATION CLASSES PROJECT STARTING HERE */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CUSTOMIZATION CLASSES PROJECT STARTING HERE */
 /* Borders */
 .border{
   border: 0.5px solid rgb(183, 183, 183);
@@ -712,4 +719,11 @@ navigation-bar > .logo:hover{
 }
 .border-yellow{
   border-color: yellow;
+}
+
+/* Media query for elements to be hidden during pritn */
+@media print {
+  .noprint {
+     visibility: hidden;
+  }
 }
