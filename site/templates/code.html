@@ -1,0 +1,15 @@
+{% extends "layout.html" %} <!-- Use this tag on the top of every file -->
+{% block title %}Get Code{% endblock %} <!-- Blocks -->
+
+{% block script %}
+<script>
+    function copy(){
+      var text = "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css'>"
+      navigator.clipboard.writeText(text)
+    };
+</script>
+{% endblock %}
+{% block body %}
+
+<button class="copycode" onclick="copy();">👉CLICK ME TO COPY CODE</button>
+{% endblock %}
