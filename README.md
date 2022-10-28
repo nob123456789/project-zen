@@ -4,7 +4,7 @@
 
 # Project-Zen
 <p align="center">
-  <b>Version</b>: Pre_Alpha0.1
+  <b>Version</b>: Alpha 0.5.9
 </p>
 
 
