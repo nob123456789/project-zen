@@ -24,4 +24,4 @@ Including beautiful default styles, flexible, and instantly deployable templates
 **HOW TO DEPLOY**
 
 Just link this stylesheets into your html file!
-https://cdn.jsdelivr.net/gh/nob123456789/project-zen-library@main/production/compiled.css
+https://cdn.jsdelivr.net/gh/pranjal32/project-zen-library@main/production/compiled.css
