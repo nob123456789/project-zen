@@ -190,7 +190,7 @@ audio:hover{
 /*button wip*/
 button{
     margin: 10px 10px 10px 0;
-    border-radius: 20px;
+    border-radius: 10px;
     background: #007bff;
     border: none;
     color: #f7f7f7;
@@ -212,6 +212,7 @@ button:disabled{
     background: #e4e4e4;
     box-shadow: none;
     color: #989899;
+    border: #d1d1d1 solid 1px;
 }
 
 
@@ -748,6 +749,14 @@ Normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 .border-yellow{
   border-color: yellow;
 }
+
+
+
+
+
+
+
+
 
 /* Media query for elements to be hidden during pritn */
 @media print {
