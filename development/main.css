@@ -774,7 +774,6 @@ card-container{
   vertical-align:top;
   margin: 10px;
   z-index: 99;
-  background-color: #f3f3f3;
   width: 300px;
   padding-bottom: 15px;
 }
@@ -802,6 +801,11 @@ card-container[horizontal]{
   width: 600px;
   height: 175px; 
   padding-bottom: 0;
+}
+card-container[background]{
+  background-image:
+  radial-gradient(at 27% 43%, rgba(228, 243, 249, 0.742) 150px, transparent 100%),
+  radial-gradient(at 99% 94%, rgba(234, 227, 250, 0.849) 100px, transparent 90%);
 }
 card-container[horizontal] img{
   width: 40%;
@@ -837,10 +841,9 @@ card-container[horizontal] > button{
 
 
 button-array{
-  display: table-row;
+  display: inline-table;
 }
 button-array > button{
-  display: table-cell;
   margin: 0px;
   border-radius: 0 0 0 0;
   border: 0.5px solid rgba(4, 62, 138, 0.701);
