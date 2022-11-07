@@ -189,7 +189,7 @@ audio:hover{
 
 /*button wip*/
 button{
-    margin: 10px 10px 10px 0;
+    margin: 10px 0 0 10px;
     border-radius: 10px;
     background: #007bff;
     border: none;
@@ -295,7 +295,7 @@ img:not([width]){
     max-width: 550px;
 }
 
-img:hover{
+img:hover:not(.card-image){
     border-radius: 18px;
     transition: 0.1s;
 
@@ -763,4 +763,58 @@ Normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
   .noprint {
      visibility: hidden;
   }
+}
+
+
+
+card-container{
+  border-radius: 5px;
+  border: #e1e1e1 solid 1px;
+  display:inline-table;
+  vertical-align:top;
+  margin: 10px;
+  z-index: 99;
+  background-color: #f3f3f3;
+  width: 300px;
+  padding-bottom: 15px;
+}
+.card-image{
+  border-radius: 5px 5px 0 0;
+  margin: 0px;
+  z-index: 98;
+}
+card-title{
+  display: block;
+  margin: 10px 10px 15px 10px;
+  font-style: bold;
+  font-size: larger;
+}
+card-desc{
+  display: block;
+  margin: 0px 10px 5px 10px;
+  font-size: smaller;
+}
+card-container[hover]:hover {
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+card-container[horizontal]{
+  width: 600px;
+  height: 175px; 
+  padding-bottom: 0;
+}
+card-container[horizontal] img{
+  width: 40%;
+  object-fit: cover;
+  height: 175px;
+  display: inline;
+  margin-right: 10px;
+  border-radius: 5px 0 0 5px;
+  float: left;
+}
+card-container[horizontal]:has(button) img{
+  height: 185px;
+}
+card-container[horizontal] > button{
+  margin: 10px 10px 10px 0px;
 }
