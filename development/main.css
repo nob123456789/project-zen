@@ -818,3 +818,19 @@ card-container[horizontal]:has(button) img{
 card-container[horizontal] > button{
   margin: 10px 10px 10px 0px;
 }
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  card-container{
+    width: 95%;
+  }
+  card-container[horizontal]{
+    width: 95%;
+    display: inline-table;
+  }
+  card-container[horizontal]:has(button) img{
+    height: 100%;
+  }
+  card-container[horizontal] > button{
+    margin: 10px 10px 0px 0px;
+  }  
+}
