@@ -834,3 +834,20 @@ card-container[horizontal] > button{
     margin: 10px 10px 0px 0px;
   }  
 }
+
+
+button-array{
+  display: table-row;
+}
+button-array > button{
+  display: table-cell;
+  margin: 0px;
+  border-radius: 0 0 0 0;
+  border: 0.5px solid rgba(4, 62, 138, 0.701);
+}
+button-array > button:first-child{
+  border-radius: 10px 0 0 10px;
+}
+button-array > button:last-child{
+  border-radius: 0 10px 10px 0;
+}
