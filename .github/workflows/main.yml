@@ -5,9 +5,10 @@ jobs:
   build:
     runs-on: ubuntu-latest      # Docker-based github actions have to run on a linux environment
     steps:
+      - name: Checkout
       - name: HTML/CSS/JS Minifier
         uses: docker://devatherock/minify-js:1.0.3
         with:
-          directory: 'https://github.com/pranjal32/project-zen/blob/master/development/main.css'
-          output: 'https://github.com/pranjal32/project-zen/blob/master/production/compiled.css'
+          directory: 'development/main.css'
+          output: 'production/compiled.css'
           add_suffix: false
