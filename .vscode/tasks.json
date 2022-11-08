@@ -4,9 +4,10 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Minify CSS",
+            "label": "Build CSS and commit",
             "type": "shell",
-            "command": "$header = Get-Content production/header.css;Add-Content -Path production/compiled.css -Value $header;cleancss -o production/compiled-temp.css development/main.css;$css = Get-Content production/compiled-temp.css;Add-Content -Path production/compiled.css -Value $css;Remove-Item 'production/compiled-temp.css';git add .;git commit -m ${input:commit-name}"
+            "command": "Clear-Content production/compiled.css;$header = Get-Content production/header.css;Add-Content -Path production/compiled.css -Value $header;cleancss -o production/compiled-temp.css development/main.css;$css = Get-Content production/compiled-temp.css;Add-Content -Path production/compiled.css -Value $css;Remove-Item production/compiled-temp.css;git add .;git commit -m ${input:commit-name};git push",
+            "problemMatcher": []
         }
     ],
     "inputs": [
