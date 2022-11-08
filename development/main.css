@@ -91,7 +91,7 @@ abbr{
     font-style: italic;
     text-decoration: underline rgb(255, 74, 74) 2px;
 }
-input[type=text], [type=password]{
+input[type=text], [type=password], [type=number], [type=email]{
     border: none;
     border-bottom: 1px rgb(55, 55, 184) solid;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 0.5px;
@@ -195,6 +195,11 @@ button{
     border: none;
     color: #f7f7f7;
     padding: 10px 12px 10px 12px;
+}
+button[grey]{
+  background: #e6e6e6;
+  border: none;
+  color: #151515;
 }
 button:hover{
     cursor: pointer;
@@ -340,21 +345,67 @@ navigation-bar > .logo:hover{
     color: rgb(231, 231, 231);
     text-decoration: none;
 }
+hamburger-menu::after{
+  filter: invert(100%);
+  vertical-align: middle;
+  margin-left:3px;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  position: absolute;
+  content: url(https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/menu/wght300/40px.svg);
+}
+hamburger-menu{
+  width: 40px;
+  height: 100%;
+}
+hamburger-menu > a{
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 15px;
+  top: 40px;
+  left: 0;
+  width: 125px;
+  color: black;
+  vertical-align: top;
+  line-height: 30px;
+  background: #e6e6e6;
+  visibility: hidden;
+  border-bottom: 0.2px solid rgb(214, 214, 214);
+}
+hamburger-menu > a:last-child{
+  border-radius: 0 0 10px 0;
+  padding-bottom: 10px;
+}
+hamburger-menu > a:hover{
+  background-color: rgb(210, 209, 209);
+  color: black
+}
+hamburger-menu > a:first-child{
+  padding-top: 10px;
+}
+a[mobile-only]{
+  display: none;
+}
+hamburger-menu:hover a{
+  visibility: visible;
+}
 /* For Mobile Portrait View */
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
   navigation-bar > a{
     display: none;
   }
+  
+  navigation-bar:hover::before{
+    transform: scale(1.5);
+  }
+  a[mobile-only]{
+    display:block;
+  }
   .logo{
     display: block;
-    text-align: center;
+    left: 100%;
     font-size: larger;
-  }
-  .logo > img{
-    max-width: 10%;
-    border-radius: 50%;
-    padding: 5px;
-    background-color: #007bffe1;
   }
   body:has(navigation-bar > .logo > img){
     padding-top: 10%;
@@ -853,4 +904,10 @@ button-array > button:first-child{
 }
 button-array > button:last-child{
   border-radius: 0 10px 10px 0;
+}
+*[inline]{
+  display: inline;
+}
+*[block]{
+  display: block;
 }
