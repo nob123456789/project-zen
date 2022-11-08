@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Minify CSS",
+            "type": "shell",
+            "command": "$header = Get-Content production/header.css;Add-Content -Path production/compiled.css -Value $header;cleancss -o production/compiled-temp.css development/main.css;$css = Get-Content production/compiled-temp.css;Add-Content -Path production/compiled.css -Value $css;Remove-Item 'production/compiled-temp.css';git add .;git commit -m ${input:commit-name}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "commit-name",
+            "type": "promptString",
+            "description": "Enter a description for your commit."
+        }
+    ]
+}
